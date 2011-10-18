@@ -1,0 +1,19 @@
+openstackx (2011.3-d5-rcb2) natty; urgency=low
+
+  * add symlinks to nova extensions
+
+ -- RCB Builder <rcb-deploy@lists.rackspace.com>  Tue, 20 Sep 2011 14:35:12 -0500
+
+openstackx (2011.3-d5-rcb1) natty; urgency=low
+
+  * Updated upstream source from
+    https://github.com/cloudbuilders/openstackx.git, revision
+    0ef04720841cda51ca57b10b0e9c35010d443522
+
+ -- termie <build@syn-n04.lab>  Tue, 13 Sep 2011 23:38:13 -0500
+
+openstackx (0.2.0) UNRELEASED; urgency=low
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- termie <github@anarkystic.com>  Mon, 20 Jun 2011 20:29:57 +0000

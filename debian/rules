@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+DEB_PYTHON_SYSTEM := pysupport
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/python-distutils.mk
+
+DEB_DH_LINK_ARGS += $(foreach dir,$(shell find openstackx/* -maxdepth 0 -type d -printf '%f\n'),usr/share/pyshared/openstackx/${dir} var/lib/nova/extensions/${dir})
+
+clean::
+	rm -rf build build-stamp configure-stamp build/ MANIFEST
+	dh_clean
+
