@@ -14,6 +14,7 @@ Homepage: https://github.com/cloudbuilders/openstackx
 XB-Python-Version: ${python:Versions}
 Depends: ${misc:Depends},
  openstack.compute,
+ python-httplib2,
  ${python:Depends}
 Description: Openstack extension modules
  These are extension modules to the openstack API that

@@ -1,3 +1,9 @@
+openstackx (2011.3-d5-rcb4) natty; urgency=low
+
+  * Add runtime depends on python-httplib2
+
+ -- RCB Builder <rcb-deploy@lists.rackspace.com>  Mon, 31 Oct 2011 16:02:57 -0500
+
 openstackx (2011.3-d5-rcb3) natty; urgency=low
 
   * Add rcb-component field in preparation for essex-e0 drop
