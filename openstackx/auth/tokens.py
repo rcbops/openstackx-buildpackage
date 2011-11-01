@@ -48,11 +48,15 @@ class TokenManager(base.ManagerWithFind):
     resource_class = Token
 
     def create(self, tenant, username, password):
-        params = {"passwordCredentials": {"username": username,
-                                          "password": password,
+        params = {"auth": {"passwordCredentials": {"username": username,
+                                          "password": password},
                                           "tenantId": tenant}}
 
-        return self._create('tokens', params, "auth")
+        return self._create('tokens', params, "access")
+
+    def create_scoped_with_token(self, tenant, token):
+        params = {"auth": {"tenantId": tenant, "token": {"id": token}}}
+        return self._create('tokens', params, "access")
 
 
 class TenantManager(base.ManagerWithFind):

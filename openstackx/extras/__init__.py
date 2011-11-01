@@ -1,7 +1,6 @@
 from openstackx.api.connection import ApiConnection
 from openstackx.extras.consoles import ConsoleManager
 from openstackx.extras.flavors import FlavorManager
-from openstackx.extras.floating_ips import FloatingIpManager
 from openstackx.extras.keypairs import KeypairManager
 from openstackx.extras.servers import ServerManager
 from openstackx.extras.snapshots import SnapshotManager
@@ -9,6 +8,7 @@ from openstackx.extras.tenants import TenantManager
 from openstackx.extras.users import UserManager
 from openstackx.extras.usage import UsageManager
 from openstackx.extras.role_refs import RoleRefManager
+from openstackx.extras.roles import RoleManager
 from openstackx.extras.endpoint_templates import EndpointTemplateManager
 from openstackx.extras.endpoints import EndpointManager
 from openstackx.extras.security_groups import SecurityGroupManager
@@ -41,7 +41,6 @@ class Extras(object):
         self.consoles = ConsoleManager(self)
         self.usage = UsageManager(self)
         self.flavors = FlavorManager(self)
-        self.floating_ips = FloatingIpManager(self)
         self.servers = ServerManager(self)
         self.keypairs = KeypairManager(self)
         self.snapshots = SnapshotManager(self)
@@ -96,6 +95,7 @@ class Account(object):
         self.tenants = TenantManager(self)
         self.users = UserManager(self)
         self.role_refs = RoleRefManager(self)
+        self.roles = RoleManager(self)
         self.endpoint_templates = EndpointTemplateManager(self)
         self.endpoints = EndpointManager(self)
 
