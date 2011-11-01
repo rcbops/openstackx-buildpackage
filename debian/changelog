@@ -1,3 +1,11 @@
+openstackx (2011.3-final-rcb1) natty; urgency=low
+
+  * import github.com/cloudbuilders/openstackx.git, rev
+    53fd616966acb4d2d0f28a382616a05460440b81\
+
+
+ -- RCB Builder <rcb-deploy@lists.rackspace.com>  Tue, 01 Nov 2011 12:43:28 -0500
+
 openstackx (2011.3-d5-rcb4) natty; urgency=low
 
   * Add runtime depends on python-httplib2
@@ -22,10 +30,4 @@ openstackx (2011.3-d5-rcb1) natty; urgency=low
     https://github.com/cloudbuilders/openstackx.git, revision
     0ef04720841cda51ca57b10b0e9c35010d443522
 
- -- termie <build@syn-n04.lab>  Tue, 13 Sep 2011 23:38:13 -0500
-
-openstackx (0.2.0) UNRELEASED; urgency=low
-
-  * Initial release. (Closes: #XXXXXX)
-
- -- termie <github@anarkystic.com>  Mon, 20 Jun 2011 20:29:57 +0000
+ -- RCB Builder <rcb-deploy@lists.rackspace.com>  Tue, 13 Sep 2011 23:38:13 -0500
