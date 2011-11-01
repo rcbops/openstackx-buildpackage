@@ -29,8 +29,8 @@ class TenantManager(base.ManagerWithFind):
 #        params = {}
 #        return self._delete("/users/%s/roleRefs/5" % user_id)
 
-    def create(self, tenant_id, description, enabled=True):
-        params = {"tenant": {"id": tenant_id,
+    def create(self, name, description, enabled=True):
+        params = {"tenant": {"name":name,
                              "description": description,
                              "enabled": enabled}}
 
@@ -43,11 +43,13 @@ class TenantManager(base.ManagerWithFind):
         """
         return self._list("/tenants", "tenants")
 
-    def update(self, tenant_id, description=None, enabled=None):
+    def update(self, tenant_id, tenant_name=None, description=None, enabled=None):
         """
         update a tenant with a new name and description
         """
-        body = {"tenant": {'id': tenant_id }}
+        body = {"tenant": {'id': tenant_id}}
+        if tenant_name is not None:
+            body['tenant']['name'] = tenant_name
         if enabled is not None:
             body['tenant']['enabled'] = enabled
         if description:

@@ -4,7 +4,6 @@ from openstackx.admin.projects import ProjectManager
 from openstackx.admin.services import ServiceManager
 from openstackx.admin.servers import ServerManager
 from openstackx.admin.flavors import FlavorManager
-from openstackx.admin.floating_ips import FloatingIpManager
 from openstackx.admin.quotas import QuotaSetManager
 from openstackx.api.config import Config
 
@@ -31,9 +30,8 @@ class Admin(object):
         self.config = self._get_config(kwargs)
         self.connection = ApiConnection(self.config)
         self.projects = ProjectManager(self)
-        self.flavors = FlavorManager(self)
-        self.floating_ips = FloatingIpManager(self)
         self.services = ServiceManager(self)
+        self.flavors = FlavorManager(self)
         self.quota_sets = QuotaSetManager(self)
         self.servers = ServerManager(self)
         self.networks = NetworkManager(self)
